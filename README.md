@@ -1,2 +1,2 @@
-# Productivity-App
-Small productivity app created using Visual C#
+# OnTrack
+A small productivity app using visual c#
