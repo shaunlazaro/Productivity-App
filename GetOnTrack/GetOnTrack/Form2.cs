@@ -22,13 +22,13 @@ namespace GetOnTrack
         string totalTimeInMinutes;
         // Used to track the input in the first textbox as a string, rather than an int with x... format.
         
-        int alarmName;
+        string currentAlarmName;
         // Used to track the input in the second textbox.
 
         private void Form2_Load(object sender, EventArgs e)
         {
             // Declare variables used.
-            totalTime = 0; //Tracks how long total session length is.
+            totalTime = 3600; //Tracks how long task will be done.
         }
 
         // Covers the use of first textbox and first button.
@@ -42,6 +42,7 @@ namespace GetOnTrack
             {
                     setLength.Enabled = true;
                     lengthInput.ForeColor = Color.Lime;
+                    label2.Text = String.Format("You Will {0} For {1} More Seconds" + totalTime, alarmName.Text, totalTime); 
             }
             else
             {
@@ -52,18 +53,17 @@ namespace GetOnTrack
         //Puts the bottom progress bar's total time.
         private void setLength_Click(object sender, EventArgs e)
         {
-            progressBar1.Maximum = totalTime;
-            progressBar1.Step = 1;
+            label2.Text = String.Format("You Will {0} For {1} More Seconds" + totalTime, alarmName.Text, totalTime); 
+            progressBar2.Maximum = totalTime;
+            progressBar2.Step = 1;
             totalTimeInMinutes = lengthInput.Text;
-            sessionLengthLabel.Text = "Total Time: 0:00 of " + lengthInput.Text;
             lengthInput.Text = "Time set!";
             setLength.Enabled = false;
             lengthInput.Enabled = false;
-            alarmInputMax.Enabled = true;
             alarmName.Enabled= true;
             addAlarm.Enabled = true;
-            alarmInputMax.ForeColor = Color.Lime;
             alarmName.ForeColor = Color.Lime;
+            addAlarm.Focus();
         }
 
         #endregion
@@ -127,23 +127,23 @@ namespace GetOnTrack
         // ConvertToMinutes(int) returns string with minutes format (assuming input is in seconds)(x:x).
         // Doesnt Work!!
 
-        // Covers the use of textbox, and second button.
+        // Covers the use of second textbox, and second button.
         #region addAlarm
         private void alarmInputMax_TextChanged(object sender, EventArgs e)
         {
             if (alarmName.Text.Length != 0)
             {
                 alarmName.ForeColor = Color.Lime;
+                addAlarm.Enabled = true;
             }
             else
             {
-                alarmName.ForeColor = Color.Red;
                 addAlarm.Enabled = false;
             }
         }
         private void addAlarm_Click(object sender, EventArgs e)
         {
-            a
+            currentAlarmName = alarmName.Text;
         }
         #endregion
         //

@@ -28,3 +28,13 @@ C:\Users\Tofer\Desktop\USB Stuff\OnTrack\GetOnTrack\GetOnTrack\obj\Debug\GetOnTr
 C:\Users\Tofer\Desktop\USB Stuff\OnTrack\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.Form2.resources
 C:\Users\Tofer\Desktop\USB Stuff\OnTrack\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.Properties.Resources.resources
 C:\Users\Tofer\Desktop\USB Stuff\OnTrack\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.csproj.GenerateResource.Cache
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\bin\Debug\GetOnTrack.exe.config
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.exe
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.pdb
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.csprojResolveAssemblyReference.cache
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.Form1.resources
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.Form2.resources
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.Properties.Resources.resources
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\obj\Debug\GetOnTrack.csproj.GenerateResource.Cache
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\bin\Debug\GetOnTrack.exe
+C:\Users\Tofer\Desktop\Productivity-App\GetOnTrack\GetOnTrack\bin\Debug\GetOnTrack.pdb

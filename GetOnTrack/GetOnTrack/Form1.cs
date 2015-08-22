@@ -29,7 +29,7 @@ namespace GetOnTrack
         {
             Form3 flashCards = new Form3();
             flashCards.Show();
-            this.Hide;
+            this.Hide();
         }
 
     }

@@ -54,18 +54,18 @@
             // setLength
             // 
             this.setLength.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setLength.Location = new System.Drawing.Point(46, 260);
+            this.setLength.Location = new System.Drawing.Point(291, 260);
             this.setLength.Name = "setLength";
             this.setLength.Size = new System.Drawing.Size(132, 23);
             this.setLength.TabIndex = 3;
-            this.setLength.Text = "Set Session Length";
+            this.setLength.Text = "Set Length";
             this.setLength.UseVisualStyleBackColor = true;
             this.setLength.Click += new System.EventHandler(this.setLength_Click);
             // 
             // setTimer
             // 
             this.setTimer.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setTimer.Location = new System.Drawing.Point(790, 260);
+            this.setTimer.Location = new System.Drawing.Point(567, 260);
             this.setTimer.Name = "setTimer";
             this.setTimer.Size = new System.Drawing.Size(132, 23);
             this.setTimer.TabIndex = 5;
@@ -89,7 +89,7 @@
             // 
             this.lengthInput.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lengthInput.ForeColor = System.Drawing.Color.Lime;
-            this.lengthInput.Location = new System.Drawing.Point(46, 289);
+            this.lengthInput.Location = new System.Drawing.Point(291, 289);
             this.lengthInput.Name = "lengthInput";
             this.lengthInput.Size = new System.Drawing.Size(132, 21);
             this.lengthInput.TabIndex = 7;
@@ -98,7 +98,6 @@
             // 
             // alarmName
             // 
-            this.alarmName.Enabled = false;
             this.alarmName.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alarmName.ForeColor = System.Drawing.Color.Red;
             this.alarmName.Location = new System.Drawing.Point(429, 289);
@@ -130,13 +129,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(12, 447);
+            this.label2.Location = new System.Drawing.Point(15, 408);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(609, 55);
+            this.label2.Size = new System.Drawing.Size(898, 42);
             this.label2.TabIndex = 15;
-            this.label2.Text = "You Will: For X Seconds";
+            this.label2.Text = "You Will Do Homework For 3600 More Seconds";
             // 
             // Form2
             // 
