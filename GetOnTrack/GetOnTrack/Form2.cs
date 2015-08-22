@@ -40,9 +40,9 @@ namespace GetOnTrack
             //Checks to see if the time is in the correct format.
             if (CheckInputIsInTime(lengthInput.Text, out totalTime))
             {
-                    setLength.Enabled = true;
-                    lengthInput.ForeColor = Color.Lime;
-                    label2.Text = String.Format("You Will {0} For {1} More Seconds" + totalTime, alarmName.Text, totalTime); 
+                setLength.Enabled = true;
+                lengthInput.ForeColor = Color.Lime;
+                label2.Text = String.Format("You Will {0} For {1} More Seconds", alarmName.Text, totalTime); 
             }
             else
             {
@@ -53,7 +53,7 @@ namespace GetOnTrack
         //Puts the bottom progress bar's total time.
         private void setLength_Click(object sender, EventArgs e)
         {
-            label2.Text = String.Format("You Will {0} For {1} More Seconds" + totalTime, alarmName.Text, totalTime); 
+            label2.Text = String.Format("You Will {0} For {1} More Seconds", alarmName.Text, totalTime); 
             progressBar2.Maximum = totalTime;
             progressBar2.Step = 1;
             totalTimeInMinutes = lengthInput.Text;
