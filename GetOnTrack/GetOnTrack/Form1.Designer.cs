@@ -42,10 +42,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(377, 65);
+            this.label1.Size = new System.Drawing.Size(389, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Get On Track";
             // 
@@ -61,7 +63,8 @@
             // 
             // OpenFocus
             // 
-            this.OpenFocus.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpenFocus.Font = new System.Drawing.Font("DengXian", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpenFocus.ForeColor = System.Drawing.Color.OrangeRed;
             this.OpenFocus.Location = new System.Drawing.Point(113, 141);
             this.OpenFocus.Name = "OpenFocus";
             this.OpenFocus.Size = new System.Drawing.Size(200, 66);
@@ -72,29 +75,32 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Castellar", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.OrangeRed;
             this.button2.Location = new System.Drawing.Point(113, 285);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 66);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Simple Calculator";
+            this.button2.Text = "Calculator *WIP*";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(113, 213);
+            this.button3.Font = new System.Drawing.Font("Bradley Hand ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.button3.Location = new System.Drawing.Point(113, 357);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 66);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Study";
+            this.button3.Text = "Study *WIP*";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(113, 357);
+            this.button5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.button5.Location = new System.Drawing.Point(113, 213);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 66);
             this.button5.TabIndex = 6;
@@ -104,10 +110,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
             this.label2.Location = new System.Drawing.Point(20, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(279, 34);
+            this.label2.Size = new System.Drawing.Size(297, 34);
             this.label2.TabIndex = 7;
             this.label2.Text = "-And Stay On Track";
             // 
@@ -115,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Yellow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(984, 511);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button5);
