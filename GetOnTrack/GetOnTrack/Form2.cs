@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Media;
+
 namespace GetOnTrack
 {
     public partial class Form2 : Form
@@ -16,14 +18,19 @@ namespace GetOnTrack
         {
             InitializeComponent();
         }
-        int totalTime;
+        int totalTime; int totalTime2;
         // Used to track the input in the first textbox as an int, rather than a string with x:xx format.
+
+        int timeTracker = 0;
 
         string totalTimeInMinutes;
         // Used to track the input in the first textbox as a string, rather than an int with x... format.
         
         string currentAlarmName;
         // Used to track the input in the second textbox.
+
+        const string soundFilePath = "alarm-sound.wav";
+        // Used to track where the sound file is.
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -53,6 +60,7 @@ namespace GetOnTrack
         //Puts the bottom progress bar's total time.
         private void setLength_Click(object sender, EventArgs e)
         {
+            totalTime2 = totalTime;
             label2.Text = String.Format("You Will {0} For {1} More Seconds", alarmName.Text, totalTime); 
             progressBar2.Maximum = totalTime;
             progressBar2.Step = 1;
@@ -63,7 +71,8 @@ namespace GetOnTrack
             alarmName.Enabled= true;
             addAlarm.Enabled = true;
             alarmName.ForeColor = Color.Lime;
-            addAlarm.Focus();
+            alarmName.Focus();
+            label2.ForeColor = Color.Red;
         }
 
         #endregion
@@ -126,37 +135,87 @@ namespace GetOnTrack
         #endregion
         // ConvertToMinutes(int) returns string with minutes format (assuming input is in seconds)(x:x).
         // Doesnt Work!!
-
         // Covers the use of second textbox, and second button.
         #region addAlarm
-        private void alarmInputMax_TextChanged(object sender, EventArgs e)
+        private void alarmName_TextChanged(object sender, EventArgs e)
         {
             if (alarmName.Text.Length != 0)
             {
                 alarmName.ForeColor = Color.Lime;
                 addAlarm.Enabled = true;
+                label2.Text = String.Format("You Will {0} For {1} More Seconds", alarmName.Text, totalTime2); 
             }
             else
             {
                 addAlarm.Enabled = false;
+                label2.ForeColor = Color.Red;
             }
+
         }
         private void addAlarm_Click(object sender, EventArgs e)
         {
             currentAlarmName = alarmName.Text;
+            setTimer.Enabled = true;
+            label2.Text = String.Format("You Will {0} For {1} More Seconds", alarmName.Text, totalTime2);
+            alarmName.Enabled = false;
+            addAlarm.Enabled = false;
+            label2.ForeColor = Color.Lime;
         }
         #endregion
-        //
+        //Checks alarmInputMax textbox if it has text in it;
 
+        //Covers the countdown and stuff.
+        #region Timers
+        public void StartProgram(string Name, int totalTime)
+        {
+            Timer.Enabled = true;
+            timeTracker = totalTime2;
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {   
+            progressBar2.PerformStep();
+            timeTracker--;
+            label2.Text = String.Format("You Will {0} For {1} More Seconds", alarmName.Text, timeTracker);
+            if (timeTracker == 0)
+            {
+                Timer.Enabled = false;
+                TimerDone();
+            }
+        }
+        public void TimerDone()
+        {
+            PlayCompletionSound();
+            alarmName.Enabled = true;
+            alarmName.ForeColor = Color.Red;
+            lengthInput.Enabled = true;
+            lengthInput.ForeColor = Color.Lime;
+            lengthInput.Text = "60:00";
+            alarmName.Text = "Do Homework";
+            totalTime = 3600;
+            addAlarm.Enabled = false;
+        }
+        public void PlayCompletionSound()
+        {
+            //To-Do!!!!
+            SoundPlayer sound = new System.Media.SoundPlayer(@soundFilePath);
+            sound.Play();
+        }
+        #endregion
+        //Contains startProgram, which disables all buttons and labels until the progress bar is full.
+        
         //Covers the use of third button.
-        #region StartProgram
+        #region SetTimerButton
         private void setTimer_Click(object sender, EventArgs e)
         {
-
+            StartProgram(currentAlarmName, totalTime2);
+            progressBar2.Maximum = totalTime2;
+            progressBar2.Step = 1;
+            Timer.Interval = 1000;
         }
         #endregion
-        //Activates the timers that run the actual progress bar
+        //Activates StartProgram
 
+        //Covers what happens when Form1
         #region FormClose
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -171,7 +230,6 @@ namespace GetOnTrack
         {
 
         }
-
 
     }
 }

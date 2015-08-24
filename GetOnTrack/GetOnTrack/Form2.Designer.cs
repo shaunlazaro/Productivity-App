@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.setLength = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.alarmScheduleLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -99,15 +101,17 @@
             // alarmName
             // 
             this.alarmName.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alarmName.ForeColor = System.Drawing.Color.Red;
+            this.alarmName.ForeColor = System.Drawing.Color.Lime;
             this.alarmName.Location = new System.Drawing.Point(429, 289);
             this.alarmName.Name = "alarmName";
             this.alarmName.Size = new System.Drawing.Size(132, 21);
             this.alarmName.TabIndex = 10;
             this.alarmName.Text = "Do Homework";
+            this.alarmName.TextChanged += new System.EventHandler(this.alarmName_TextChanged);
             // 
             // progressBar2
             // 
+            this.progressBar2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.progressBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.progressBar2.Location = new System.Drawing.Point(22, 204);
             this.progressBar2.Name = "progressBar2";
@@ -130,12 +134,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(15, 408);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(898, 42);
+            this.label2.Size = new System.Drawing.Size(956, 42);
             this.label2.TabIndex = 15;
-            this.label2.Text = "You Will Do Homework For 3600 More Seconds";
+            this.label2.Text = "You Should Do Homework For 3600 More Seconds";
+            // 
+            // Timer
+            // 
+            this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // Form2
             // 
@@ -174,5 +183,6 @@
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label alarmScheduleLabel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer Timer;
     }
 }
