@@ -16,5 +16,12 @@ namespace GetOnTrack
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 homePage = new Form1();
+            homePage.Show();
+            this.Hide();
+        }
     }
 }

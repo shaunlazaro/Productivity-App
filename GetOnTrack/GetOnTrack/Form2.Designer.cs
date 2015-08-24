@@ -40,6 +40,7 @@
             this.alarmScheduleLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -146,6 +147,17 @@
             this.Timer.Interval = 1000;
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
+            // Back
+            // 
+            this.Back.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Location = new System.Drawing.Point(850, 9);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(132, 23);
+            this.Back.TabIndex = 16;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +165,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(984, 511);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.alarmScheduleLabel);
             this.Controls.Add(this.progressBar2);
@@ -184,5 +197,6 @@
         private System.Windows.Forms.Label alarmScheduleLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.Button Back;
     }
 }
