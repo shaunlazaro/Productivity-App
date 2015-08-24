@@ -53,6 +53,7 @@ namespace GetOnTrack
             }
             else
             {
+                setLength.Enabled = false;
                 lengthInput.ForeColor = Color.Red;
             }
         }
