@@ -239,5 +239,27 @@ namespace GetOnTrack
             this.Hide();
         }
 
+        private void instructionButton_Click(object sender, EventArgs e)
+        {
+            if (label3.Visible)
+            {
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                label7.Visible = false;
+                instructionButton.Text = "Show Instructions";
+            }
+            else if (!label3.Visible)
+            {
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label7.Visible = true;
+                instructionButton.Text = "Hide Instructions";
+            }
+        }
+
     }
 }

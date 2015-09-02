@@ -41,6 +41,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.Back = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.instructionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +90,7 @@
             this.addAlarm.Name = "addAlarm";
             this.addAlarm.Size = new System.Drawing.Size(132, 23);
             this.addAlarm.TabIndex = 6;
-            this.addAlarm.Text = "Add An Alarm";
+            this.addAlarm.Text = "Set Task";
             this.addAlarm.UseVisualStyleBackColor = true;
             this.addAlarm.Click += new System.EventHandler(this.addAlarm_Click);
             // 
@@ -138,9 +144,9 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(15, 408);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(956, 42);
+            this.label2.Size = new System.Drawing.Size(898, 42);
             this.label2.TabIndex = 15;
-            this.label2.Text = "You Should Do Homework For 3600 More Seconds";
+            this.label2.Text = "You Will Do Homework For 3600 More Seconds";
             // 
             // Timer
             // 
@@ -158,6 +164,76 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // label3
+            // 
+            this.label3.AllowDrop = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(298, 313);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 36);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "How long you\r\nwant to do task\r\n";
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AllowDrop = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(450, 313);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 36);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "The Task\r\nAt Hand\r\n";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AllowDrop = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(567, 286);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 36);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Starts the timer\r\nWhen bottom is green";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AllowDrop = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 354);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(157, 54);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "What your task is\r\nRed means not ready\r\nGreen means ready";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AllowDrop = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(19, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(286, 18);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "The bar, showing how much time is left\r\n";
+            this.label7.Visible = false;
+            // 
+            // instructionButton
+            // 
+            this.instructionButton.Location = new System.Drawing.Point(850, 37);
+            this.instructionButton.Name = "instructionButton";
+            this.instructionButton.Size = new System.Drawing.Size(132, 23);
+            this.instructionButton.TabIndex = 22;
+            this.instructionButton.Text = "Show Instructions";
+            this.instructionButton.UseVisualStyleBackColor = true;
+            this.instructionButton.Click += new System.EventHandler(this.instructionButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +241,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(984, 511);
+            this.Controls.Add(this.instructionButton);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.alarmScheduleLabel);
@@ -198,5 +280,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button instructionButton;
     }
 }

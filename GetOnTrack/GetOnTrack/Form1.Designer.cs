@@ -75,6 +75,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Castellar", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.OrangeRed;
             this.button2.Location = new System.Drawing.Point(113, 285);
@@ -88,7 +89,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Bradley Hand ITC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.button3.Location = new System.Drawing.Point(113, 357);
+            this.button3.Location = new System.Drawing.Point(113, 213);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 66);
             this.button3.TabIndex = 4;
@@ -98,9 +99,10 @@
             // 
             // button5
             // 
+            this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.button5.Location = new System.Drawing.Point(113, 213);
+            this.button5.Location = new System.Drawing.Point(113, 357);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 66);
             this.button5.TabIndex = 6;
