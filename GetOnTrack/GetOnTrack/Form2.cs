@@ -248,6 +248,8 @@ namespace GetOnTrack
                 label5.Visible = false;
                 label6.Visible = false;
                 label7.Visible = false;
+                label8.Visible = false;
+                label9.Visible = false;
                 instructionButton.Text = "Show Instructions";
             }
             else if (!label3.Visible)
@@ -257,6 +259,8 @@ namespace GetOnTrack
                 label5.Visible = true;
                 label6.Visible = true;
                 label7.Visible = true;
+                label8.Visible = true;
+                label9.Visible = true;
                 instructionButton.Text = "Hide Instructions";
             }
         }
