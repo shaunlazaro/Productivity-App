@@ -170,10 +170,10 @@
             // 
             this.label3.AllowDrop = true;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(298, 313);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 36);
+            this.label3.Size = new System.Drawing.Size(102, 36);
             this.label3.TabIndex = 17;
             this.label3.Text = "How long you\r\nwant to do task\r\n";
             this.label3.Visible = false;
@@ -182,46 +182,46 @@
             // 
             this.label4.AllowDrop = true;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(450, 313);
+            this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(429, 313);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 36);
+            this.label4.Size = new System.Drawing.Size(117, 36);
             this.label4.TabIndex = 18;
-            this.label4.Text = "The Task\r\nAt Hand\r\n";
+            this.label4.Text = "The task that\r\nYou will perform\r\n";
             this.label4.Visible = false;
             // 
             // label5
             // 
             this.label5.AllowDrop = true;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(567, 286);
+            this.label5.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(567, 289);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 36);
+            this.label5.Size = new System.Drawing.Size(173, 36);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Starts the timer\r\nWhen bottom is green";
+            this.label5.Text = "This starts the timer\r\nWhen the bottom is green";
             this.label5.Visible = false;
             // 
             // label6
             // 
             this.label6.AllowDrop = true;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(19, 354);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 54);
+            this.label6.Size = new System.Drawing.Size(141, 54);
             this.label6.TabIndex = 20;
-            this.label6.Text = "What your task is\r\nRed means not ready\r\nGreen means ready";
+            this.label6.Text = "What your task is:\r\nRed means not ready\r\nGreen means ready";
             this.label6.Visible = false;
             // 
             // label7
             // 
             this.label7.AllowDrop = true;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(19, 182);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(286, 18);
+            this.label7.Size = new System.Drawing.Size(257, 18);
             this.label7.TabIndex = 21;
             this.label7.Text = "The bar, showing how much time is left\r\n";
             this.label7.Visible = false;
@@ -240,10 +240,10 @@
             // 
             this.label8.AllowDrop = true;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Baskerville Old Face", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(180, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(234, 30);
+            this.label8.Size = new System.Drawing.Size(224, 31);
             this.label8.TabIndex = 23;
             this.label8.Text = "How To Operate:";
             this.label8.Visible = false;
@@ -252,10 +252,10 @@
             // 
             this.label9.AllowDrop = true;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(182, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(664, 108);
+            this.label9.Size = new System.Drawing.Size(589, 108);
             this.label9.TabIndex = 24;
             this.label9.Text = resources.GetString("label9.Text");
             this.label9.Visible = false;

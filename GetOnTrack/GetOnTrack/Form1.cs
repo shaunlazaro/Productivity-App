@@ -16,7 +16,7 @@ namespace GetOnTrack
         {
             InitializeComponent();
         }
-        //Open Focus
+        // Opens Focus
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 timeOrganizer = new Form2();
@@ -24,11 +24,18 @@ namespace GetOnTrack
             this.Hide();
         }
 
-        //Open Study
+        // Opens Study
         private void button3_Click(object sender, EventArgs e)
         {
             Form3 flashCards = new Form3();
             flashCards.Show();
+            this.Hide();
+        }
+        // Opens Handy
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 calculator = new Form4();
+            calculator.Show();
             this.Hide();
         }
 

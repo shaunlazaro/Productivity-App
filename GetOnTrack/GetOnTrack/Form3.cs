@@ -27,7 +27,7 @@ namespace GetOnTrack
         {
             button3.Visible = false;
             openViewButton.Visible = false;
-            Form4 viewCards = new Form4;
+            Form4 viewCards = new Form4();
             viewCards.Show();
             this.Hide();
         }
