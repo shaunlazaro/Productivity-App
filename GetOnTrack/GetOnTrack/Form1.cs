@@ -31,12 +31,11 @@ namespace GetOnTrack
             flashCards.Show();
             this.Hide();
         }
-        // Opens Handy
-        private void button2_Click(object sender, EventArgs e)
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form4 calculator = new Form4();
-            calculator.Show();
-            this.Hide();
+            this.Dispose();
+            this.Close();
         }
 
     }

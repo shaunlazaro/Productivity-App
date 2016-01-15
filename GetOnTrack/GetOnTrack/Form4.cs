@@ -7,63 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace GetOnTrack
 {
     public partial class Form4 : Form
     {
-        public Form4()
+        bool killEars;
+        // If true, then a loud sound will play when time is up.
+        
+        string alarmDisplay;
+        // Tracks what task the user is doing.
+        
+        const string soundFilePath = "alarm-sound.wav";
+        SoundPlayer sound = new System.Media.SoundPlayer(@soundFilePath);
+        // Used to track where the sound file is, and play the sound.
+        
+        public Form4(bool playSound, string task)
         {
             InitializeComponent();
+            killEars = playSound;
+            alarmDisplay = task;
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
-        }
-
-        // To Do For Back Button
-        // To Do: Create instructions.
-        // To Do: Insert instructions into showLabels method.
-        // To Do: Insert instructions into hideLabels method.
-        #region Back Button
-        // Show Instructions Button
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if(button2.Text=="Show Instructions")
+            label1.Text = alarmDisplay + " Is Over!";
+            if(killEars)
             {
-                button2.Text = "Hide Instructions";
-                showInstructions();
-            }
-            else
-            {
-                button2.Text = "Show Instructions";
-                hideInstructions();
+                sound.Play();
             }
         }
 
-        // Shows the label objects that have the instructions in them.
-        public void showInstructions()
+        private void Form4_Leave(object sender, EventArgs e)
         {
-
+            sound.Stop();
+            sound.Dispose();
         }
 
-        // Hides the labels with the instructions in them.
-        public void hideInstructions()
+        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            sound.Stop();
+            sound.Dispose();
+            this.Dispose();
+            this.Close();
         }
-
-        #endregion
-
-        #region Home Button
-        // Back Button.
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 home = new Form1();
-            home.Show();
-            this.Hide();
-        }
-        #endregion
     }
 }

@@ -49,6 +49,7 @@
             this.instructionButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.timerSound = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,6 +76,7 @@
             // 
             // setTimer
             // 
+            this.setTimer.Enabled = false;
             this.setTimer.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setTimer.Location = new System.Drawing.Point(567, 260);
             this.setTimer.Name = "setTimer";
@@ -162,7 +164,7 @@
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(132, 23);
             this.Back.TabIndex = 16;
-            this.Back.Text = "Back";
+            this.Back.Text = "Back/Cancel Timer";
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
@@ -260,6 +262,18 @@
             this.label9.Text = resources.GetString("label9.Text");
             this.label9.Visible = false;
             // 
+            // timerSound
+            // 
+            this.timerSound.AutoSize = true;
+            this.timerSound.Checked = true;
+            this.timerSound.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.timerSound.Location = new System.Drawing.Point(626, 185);
+            this.timerSound.Name = "timerSound";
+            this.timerSound.Size = new System.Drawing.Size(178, 17);
+            this.timerSound.TabIndex = 25;
+            this.timerSound.Text = "Play Sound When Timer Is Over";
+            this.timerSound.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +281,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(984, 511);
+            this.Controls.Add(this.timerSound);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.instructionButton);
@@ -316,5 +331,6 @@
         private System.Windows.Forms.Button instructionButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox timerSound;
     }
 }

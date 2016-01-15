@@ -29,9 +29,6 @@ namespace GetOnTrack
         string currentAlarmName;
         // Used to track the input in the second textbox.
 
-        const string soundFilePath = "alarm-sound.wav";
-        // Used to track where the sound file is.
-
         private void Form2_Load(object sender, EventArgs e)
         {
             // Declare variables used.
@@ -136,6 +133,7 @@ namespace GetOnTrack
         #endregion
         // ConvertToMinutes(int) returns string with minutes format (assuming input is in seconds)(x:x).
         // Doesnt Work!!
+        
         // Covers the use of second textbox, and second button.
         #region addAlarm
         private void alarmName_TextChanged(object sender, EventArgs e)
@@ -172,6 +170,8 @@ namespace GetOnTrack
             Timer.Enabled = true;
             timeTracker = totalTime2;
         }
+
+        // Every tick of timer, checks if timer is over, then updates the notice is at the bottom!
         private void Timer_Tick(object sender, EventArgs e)
         {   
             progressBar2.PerformStep();
@@ -183,6 +183,8 @@ namespace GetOnTrack
                 TimerDone();
             }
         }
+
+        // Resets all of the labels so you can reuse buttons after timer is up.
         public void TimerDone()
         {
             PlayCompletionSound();
@@ -194,12 +196,15 @@ namespace GetOnTrack
             alarmName.Text = "Do Homework";
             totalTime = 3600;
             addAlarm.Enabled = false;
+            setTimer.Enabled = false;
         }
+
+        // Instead of playing a new completion sound, this will create a new popup window, which can cause a sound (user can choose).
         public void PlayCompletionSound()
         {
             //To-Do!!!!
-            SoundPlayer sound = new System.Media.SoundPlayer(@soundFilePath);
-            sound.Play();
+            Form4 popup = new Form4(timerSound.Checked, alarmName.Text);
+            popup.Show();
         }
         #endregion
         //Contains startProgram, which disables all buttons and labels until the progress bar is full.
@@ -221,16 +226,14 @@ namespace GetOnTrack
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1 form1 = new Form1();
+            form1.Dispose();
             form1.Close();
+            this.Dispose();
             this.Close();
         }
         #endregion
         //Holds the Form2_FormClosing method (closes Form1 when Form2 is closed)
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Back_Click(object sender, EventArgs e)
         {
@@ -239,6 +242,7 @@ namespace GetOnTrack
             this.Hide();
         }
 
+        // Will hide or show all the instruction labels.
         private void instructionButton_Click(object sender, EventArgs e)
         {
             if (label3.Visible)
