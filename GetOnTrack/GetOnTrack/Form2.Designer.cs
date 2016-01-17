@@ -37,7 +37,6 @@
             this.lengthInput = new System.Windows.Forms.TextBox();
             this.alarmName = new System.Windows.Forms.TextBox();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.alarmScheduleLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.Back = new System.Windows.Forms.Button();
@@ -111,6 +110,7 @@
             // 
             // alarmName
             // 
+            this.alarmName.Enabled = false;
             this.alarmName.Font = new System.Drawing.Font("DengXian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alarmName.ForeColor = System.Drawing.Color.Lime;
             this.alarmName.Location = new System.Drawing.Point(429, 289);
@@ -129,18 +129,6 @@
             this.progressBar2.Size = new System.Drawing.Size(960, 50);
             this.progressBar2.TabIndex = 12;
             // 
-            // alarmScheduleLabel
-            // 
-            this.alarmScheduleLabel.AutoSize = true;
-            this.alarmScheduleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.alarmScheduleLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alarmScheduleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.alarmScheduleLabel.Location = new System.Drawing.Point(391, 182);
-            this.alarmScheduleLabel.Name = "alarmScheduleLabel";
-            this.alarmScheduleLabel.Size = new System.Drawing.Size(229, 19);
-            this.alarmScheduleLabel.TabIndex = 14;
-            this.alarmScheduleLabel.Text = "Do Task From: 0:00 to 0:00";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -148,9 +136,9 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(15, 408);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(898, 42);
+            this.label2.Size = new System.Drawing.Size(886, 42);
             this.label2.TabIndex = 15;
-            this.label2.Text = "You Will Do Homework For 3600 More Seconds";
+            this.label2.Text = "You will Do Homework for 3600 more seconds";
             // 
             // Timer
             // 
@@ -187,9 +175,9 @@
             this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(429, 313);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 36);
+            this.label4.Size = new System.Drawing.Size(113, 36);
             this.label4.TabIndex = 18;
-            this.label4.Text = "The task that\r\nYou will perform\r\n";
+            this.label4.Text = "The task that\ryou will perform\r\n";
             this.label4.Visible = false;
             // 
             // label5
@@ -199,9 +187,9 @@
             this.label5.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(567, 289);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 36);
+            this.label5.Size = new System.Drawing.Size(166, 36);
             this.label5.TabIndex = 19;
-            this.label5.Text = "This starts the timer\r\nWhen the bottom is green";
+            this.label5.Text = "This starts the timer\r\nwhen the bottom is green";
             this.label5.Visible = false;
             // 
             // label6
@@ -223,9 +211,9 @@
             this.label7.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(19, 182);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(257, 18);
+            this.label7.Size = new System.Drawing.Size(243, 18);
             this.label7.TabIndex = 21;
-            this.label7.Text = "The bar, showing how much time is left\r\n";
+            this.label7.Text = "This bar shows how much time is left\r\n";
             this.label7.Visible = false;
             // 
             // instructionButton
@@ -254,6 +242,7 @@
             // 
             this.label9.AllowDrop = true;
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(182, 37);
             this.label9.Name = "label9";
@@ -267,11 +256,11 @@
             this.timerSound.AutoSize = true;
             this.timerSound.Checked = true;
             this.timerSound.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.timerSound.Location = new System.Drawing.Point(626, 185);
+            this.timerSound.Location = new System.Drawing.Point(404, 184);
             this.timerSound.Name = "timerSound";
-            this.timerSound.Size = new System.Drawing.Size(178, 17);
+            this.timerSound.Size = new System.Drawing.Size(167, 17);
             this.timerSound.TabIndex = 25;
-            this.timerSound.Text = "Play Sound When Timer Is Over";
+            this.timerSound.Text = "Play sound when timer Is over";
             this.timerSound.UseVisualStyleBackColor = true;
             // 
             // Form2
@@ -279,7 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(984, 511);
             this.Controls.Add(this.timerSound);
             this.Controls.Add(this.label9);
@@ -292,7 +281,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.alarmScheduleLabel);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.alarmName);
             this.Controls.Add(this.lengthInput);
@@ -319,7 +307,6 @@
         private System.Windows.Forms.TextBox lengthInput;
         private System.Windows.Forms.TextBox alarmName;
         private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.Label alarmScheduleLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Button Back;

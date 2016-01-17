@@ -34,8 +34,12 @@ namespace GetOnTrack
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Dispose();
-            this.Close();
+            Application.Exit();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

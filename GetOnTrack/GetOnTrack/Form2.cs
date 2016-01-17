@@ -29,6 +29,9 @@ namespace GetOnTrack
         string currentAlarmName;
         // Used to track the input in the second textbox.
 
+        Form1 homePage = new Form1();
+        // Used to handle things involving home page.
+
         private void Form2_Load(object sender, EventArgs e)
         {
             // Declare variables used.
@@ -225,9 +228,7 @@ namespace GetOnTrack
         #region FormClose
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Dispose();
-            form1.Close();
+            homePage.Show();
             this.Dispose();
             this.Close();
         }
@@ -237,9 +238,9 @@ namespace GetOnTrack
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Form1 homePage = new Form1();
             homePage.Show();
-            this.Hide();
+            this.Dispose();
+            this.Close();
         }
 
         // Will hide or show all the instruction labels.
