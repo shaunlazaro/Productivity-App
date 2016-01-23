@@ -24,13 +24,6 @@ namespace GetOnTrack
             this.Hide();
         }
 
-        // Opens Study
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form3 flashCards = new Form3();
-            flashCards.Show();
-            this.Hide();
-        }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -38,6 +31,11 @@ namespace GetOnTrack
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

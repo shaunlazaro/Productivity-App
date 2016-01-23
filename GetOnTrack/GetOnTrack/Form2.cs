@@ -205,8 +205,8 @@ namespace GetOnTrack
         // Instead of playing a new completion sound, this will create a new popup window, which can cause a sound (user can choose).
         public void PlayCompletionSound()
         {
-            //To-Do!!!!
             Form4 popup = new Form4(timerSound.Checked, alarmName.Text);
+            popup.TopMost = true;
             popup.Show();
         }
         #endregion
