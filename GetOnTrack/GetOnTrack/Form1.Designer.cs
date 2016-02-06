@@ -73,15 +73,15 @@
             // 
             // button5
             // 
-            this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(62, 315);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(255, 137);
             this.button5.TabIndex = 6;
-            this.button5.Text = "Lister *WIP*";
+            this.button5.Text = "Lister";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label2
             // 

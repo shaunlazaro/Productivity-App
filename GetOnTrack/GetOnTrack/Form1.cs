@@ -40,5 +40,12 @@ namespace GetOnTrack
 
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form3 ListerSaveChooser = new Form3();
+            ListerSaveChooser.Show();
+            this.Hide();
+        }
+
     }
 }
